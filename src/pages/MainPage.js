@@ -4,7 +4,7 @@ import LogoBlock from '../components/MainPage/LogoBlock'
 
 const MainSection = styled('section')({
     width: '100%',
-border: '1px solid pink'
+// border: '1px solid pink'
 })
 
 function MainPage() {

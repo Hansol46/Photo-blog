@@ -1,5 +1,6 @@
 import { styled } from "@material-ui/core";
 import { Route } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import MainPage from "./pages/MainPage";
@@ -27,7 +28,7 @@ function App() {
       <Route path="/" exact component={MainPage} />
       <Route path="/portfolio" component={PortfolioPage} />
       <Route path="/about" component={AboutPage} />
-      FOOTER
+      <Footer />
     </Wrapper>
   );
 }

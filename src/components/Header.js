@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
-import {colors} from '../utils/vars'
+import {colors, fontWeight, letterSpacing} from '../utils/vars'
 
 const HeaderBlock = styled("header")({
   width: '100%',
@@ -21,9 +21,10 @@ const HeaderBlock = styled("header")({
     padding: '0px 15px',
   },
   '& ul li a': {
-    color: '#515351',
-    fontWeight: '500',
-    letterSpacing: '1px',
+    fontFamily: "AngeleciaProReg",
+    color: `${colors.mainColor}`,
+    fontWeight: `${fontWeight.mainWeight}`,
+    letterSpacing: `${letterSpacing.mainLetterSpacing}`,
     transition: 'color 0.5s ease 0s',
   },
   '& ul li a:hover': {
