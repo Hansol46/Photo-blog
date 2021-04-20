@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { styled } from "@material-ui/core";
+import { Route } from "react-router-dom";
+import Header from "./components/Header";
+import AboutPage from "./pages/AboutPage";
+import MainPage from "./pages/MainPage";
+import PortfolioPage from "./pages/PortfolioPage";
+
+const Wrapper = styled("div")({
+  width: "1170px",
+  margin: "0 auto",
+  ["@media (max-width:1200px)"]: {
+    width: "970px",
+  },
+  ["@media (max-width:985px)"]: {
+    width: "700px",
+  },
+  ["@media (max-width:720px)"]: {
+    width: "auto",
+    padding: '0px 15px'
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Header />
+      <Route path="/" exact component={MainPage} />
+      <Route path="/portfolio" component={PortfolioPage} />
+      <Route path="/about" component={AboutPage} />
+      FOOTER
+    </Wrapper>
   );
 }
 
