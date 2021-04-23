@@ -1,13 +1,41 @@
-import React from 'react'
+import React from "react";
+import { styled } from "@material-ui/core";
+import { colors, letterSpacing, fontWeight } from "../../utils/vars";
 
-function CardsBlock() {
-    return (
-        <div>
-            <img src='http://static-cdn4.vigbo.tech/u81085/91828/blog/5447832/4851468/63331623/500-f5daf0b350423a184c632705528e5f14.png' />
-            <h3>все исходники</h3>
-            <p>Вы получаете все исходники в день съемки, из которых самостоятельно можете выбрать снимки для ретуши</p>
-        </div>
-    )
+const Card = styled("div")({
+  border: "2px solid blue",
+  textAlign: "center",
+  width: '40%',
+  fontFamily: "AngeleciaProReg",
+  "& img" :{
+      maxWidth: '100%',
+      width: '150px',
+      height: '150px',
+      paddingBottom:'15px'
+  },
+  "& h3": {
+    marginBottom: 20,
+    color: 'black',
+    fontWeight: `${fontWeight.mainWeight}`,
+    letterSpacing: `${letterSpacing.mainLetterSpacing}`,
+      fontSize: '28px',
+  },
+  "& p": {
+    lineHeight: '1.5',
+    color: `${colors.mainColor}`,
+    fontWeight: `${fontWeight.mainWeight}`,
+    letterSpacing: `${letterSpacing.mainLetterSpacing}`,
+  }
+});
+function CardsBlock(props) {
+  const { ulr, title, paragraph } = props;
+  return (
+    <Card>
+      <img src={ulr} />
+      <h3>{title}</h3>
+      <p>{paragraph}</p>
+    </Card>
+  );
 }
 
-export default CardsBlock
+export default CardsBlock;

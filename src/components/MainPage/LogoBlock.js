@@ -1,23 +1,27 @@
 import React from 'react'
-import { styled } from '@material-ui/core'
+import { Link, styled } from '@material-ui/core'
 import {colors, letterSpacing, fontWeight} from '../../utils/vars'
 const Logo = styled('div')({
     margin: '70px 0px',
     display: 'flex',
     justifyContent: 'center',
     border: '1px solid red',
-    '& h1': {
+    '& a': {
         fontFamily: "AngeleciaProReg",
         color: `${colors.mainColor}`,
         fontWeight: `${fontWeight.mainWeight}`,
         letterSpacing: `${letterSpacing.mainLetterSpacing}`,
         textTransform: 'uppercase',
+    },
+    '& a:hover':{
+        textDecoration: 'none',
+        cursor:'pointer'
     }
 })
 function LogoBlock() {
     return (
         <Logo>
-            <h1>vita dorofeeva</h1>
+            <h1><Link to='/'> vita dorofeeva </Link> </h1>
         </Logo>
     )
 }
