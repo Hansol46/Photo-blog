@@ -2,20 +2,20 @@ import React from "react";
 import ImgHello from "../../images/hello.png";
 import { styled } from "@material-ui/core";
 import { colors, letterSpacing, fontWeight } from "../../utils/vars";
-
+import { Link } from 'react-router-dom'
 const MainBlock = styled("article")({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  border: "2px solid blue",
+  // border: "2px solid blue",
   width: "100%",
   fontFamily: "AngeleciaProReg",
   fontWeight: `${fontWeight.mainWeight}`,
   letterSpacing: `${letterSpacing.mainLetterSpacing}`,
 });
 const ArticleBlock = styled("div")({
-  border: "1px solid red",
+  // border: "1px solid red",
   width: "820px",
   textAlign: "center",
   // display: 'flex',
@@ -27,18 +27,27 @@ const ArticleBlock = styled("div")({
     maxWidth: "100%",
     width: 465,
     height: 85,
-    border: "1px solid green",
+    // border: "1px solid green",
     marginBottom: "50px",
+  },
+  ["@media (max-width: 726px)"] : {
+    
   },
   "& h2": {
     marginBottom: "50px",
     letterSpacing: "3px",
+    ["@media (max-width: 726px)"] : {
+    fontSize: '18px'
+    },
   },
   "& p:first-of-type": {
     marginBottom: "30px",
   },
   "& p": {
     color: `${colors.mainColor}`,
+    ["@media (max-width: 726px)"] : {
+      fontSize: '16px'
+      },
   },
 });
 const ButtonBlocks = styled("div")({
@@ -68,8 +77,8 @@ function InfoBlock() {
       <ArticleBlock>
         <img src={ImgHello} alt="helllo" />
         <h2>
-          Меня зовут Вита, я фотографирую, занимаюсь визуалом, упаковкой брендов
-          и личных блогов в Instagram
+          Меня зовут Ирина, я фотографирую, занимаюсь визуалом, и очень
+          люблю интересные фотосессии 
         </h2>
         <p>Большинство моих работ - фотографии обычных людей, а не моделей. </p>
         <p>
@@ -78,9 +87,9 @@ function InfoBlock() {
           просто получать удовольствие от процесса.
         </p>
         <ButtonBlocks>
-          <a href="#"> порфолио </a>
-          <a href="#"> об авторе </a>
-          <a href="#"> контакты </a>
+          <Link to="/portfolio"> порфолио </Link>
+          <Link to="/about"> об авторе </Link>
+          <Link to="#"> контакты </Link>
         </ButtonBlocks>
       </ArticleBlock>
     </MainBlock>

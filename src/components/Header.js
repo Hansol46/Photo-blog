@@ -18,7 +18,11 @@ const HeaderBlock = styled("header")({
     alignItems: 'center'
   },
   '& ul li': {
-    padding: '0px 15px',
+    // padding: '0px 15px',
+    paddingRight: '30px'
+  },
+  '& ul li:last-child': {
+    paddingRight: '0px'
   },
   '& ul li a': {
     fontFamily: "AngeleciaProReg",
@@ -29,8 +33,21 @@ const HeaderBlock = styled("header")({
   },
   '& ul li a:hover': {
     color: 'black',
-    textDecoration: 'underline'
+    textDecoration: 'underline',
     // borderBottom: '1px solid black'
+  },
+  ["@media (max-width:520px)"]: {
+    // border: '1px solid black',
+    justifyContent: 'center',
+    '& ul:first-child': {
+      display: 'none',
+    }
+  },
+  ['@media (max-width: 350px)']: {
+    '& ul': {
+      fontSize: '14px'
+    }
+   
   }
 });
 function Header() {
@@ -44,7 +61,7 @@ function Header() {
         <Link to='#'> <FacebookIcon /> </Link>
         </li>
         <li>
-        <Link to='#'><PhoneOutlinedIcon /> </Link>
+        <a href="tel:+79606888800"><PhoneOutlinedIcon /> </a>
         </li>
       </ul>
       <ul>
@@ -57,9 +74,9 @@ function Header() {
         <li>
           <Link to="/about">Об авторе</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/">Контакты</Link>
-        </li>
+        </li> */}
       </ul>
     </HeaderBlock>
   );
