@@ -1,7 +1,11 @@
 import React from "react";
 import { styled } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
+
 const PhotoImg = styled("div")({
+  "& .cardPhoto2": {
+    display: "none",
+  },
   "& .imgFull:not(:target)": {
     display: "none",
   },
@@ -39,17 +43,17 @@ const PhotoImg = styled("div")({
       right: "20px",
     },
   },
-  "@media(max-width:970px)": {
-    "& .imgFullScreen": {
-      width: 400,
-      height: 400,
-    },
-  },
+  // "@media(max-width:970px)": {
+  //   "& .imgFullScreen": {
+  //     width: 400,
+  //     height: 400,
+  //   },
+  // },
   "@media(max-width:750px)": {
-    "& .imgFullScreen": {
-      width: 300,
-      height: 300,
-    },
+    // "& .imgFullScreen": {
+    //   width: 300,
+    //   height: 300,
+    // },
     "& .closeImg": {
       right: "20px",
       top: "50px",
@@ -60,26 +64,56 @@ const PhotoImg = styled("div")({
       right: "45%",
     },
   },
+  "@media(max-width:550px)": {
+    "& .cardPhoto2": {
+      display: "block",
+    },
+    "& .cardPhoto": {
+      display: "none",
+    },
+  },
 });
-/* PHOTO CLOSE  */
-
+const ImgPhoto = styled("img")({
+  width: 300,
+  "@media (max-width: 700px)": {
+    width: "70%",
+  },
+  "@media (max-width: 530px)": {
+    width: "100%",
+  },
+});
+const ImgFullScren = styled("img")({
+  width: 400,
+  "@media (max-width: 985px)": {
+    height: "90vh",
+  },
+  //
+});
 function Photo({ photo }) {
-  const { url, thumbnailUrl } = photo;
   return (
     <PhotoImg>
       <div className="cardPhoto">
-        <a href="#imgFull">
-          <img src={thumbnailUrl} alt="Фото" title=" Нажмите чтобы увеличить" />
+        <a href={`#imgFull${photo.id}`}>
+          <ImgPhoto
+            src={photo.url}
+            alt="Фото"
+            title=" Нажмите чтобы увеличить"
+          />
         </a>
       </div>
 
-      <div id="imgFull" className="imgFull">
+      <div className="cardPhoto2">
+        <ImgPhoto src={photo.url} alt="Фото" title=" Нажмите чтобы увеличить" />
+      </div>
+
+      <div id={`imgFull${photo.id}`} className="imgFull">
         <a href="#" className="closeImg">
           <CloseIcon style={{ fontSize: 40 }} />
         </a>
-        <img
+
+        <ImgFullScren
           className="imgFullScreen"
-          src={url}
+          src={photo.url}
           alt="Фотография"
           title=" Нажмите на Х чтобы закрыть "
         />

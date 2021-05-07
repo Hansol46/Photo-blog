@@ -1,9 +1,10 @@
 import React from "react";
 import { styled } from "@material-ui/core";
-// import { colors, letterSpacing, fontWeight } from "../utils/vars";
 import GalleryCard from "./GalleryCard";
-// import {  } from 'react-router';
 import { Link, Route } from "react-router-dom";
+
+import { albumsArray } from "../../utils/data";
+
 const Gallery = styled("section")({
   display: "grid",
   gridTemplateColumns: "2fr 2fr 2fr ",
@@ -22,22 +23,34 @@ const Gallery = styled("section")({
   },
 });
 function GalleryBlock({ albums, photos }) {
-
+  console.log("Albums:", albumsArray);
   return (
     <Gallery>
-      {albums.map((album) => (
+      {albumsArray.map((album) => (
         <Route
           exact
           path={"/portfolio"}
           key={album.id}
           render={() => (
             <Link to={`/portfolio/albums/${album.id}`}>
-              {/* to={`/portfolio/${album.id}/photos`} */}
-              <GalleryCard key={album.id} album={album} photos={photos} />
+              <GalleryCard key={album.id} album={album} />
             </Link>
           )}
         />
       ))}
+
+      {/* {albums.map((album) => (
+        <Route
+          exact
+          path={"/portfolio"}
+          key={album.id}
+          render={() => (
+            <Link to={`/portfolio/albums/${album.id}`}>
+              <GalleryCard key={album.id} album={album} photos={photos} />
+            </Link>
+          )}
+        />
+      ))} */}
     </Gallery>
   );
 }
