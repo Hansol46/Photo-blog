@@ -5,7 +5,7 @@ const Info = styled("article")({
   // border: "2px solid pink",
   display: "flex",
   width: "100%",
-  ["@media (max-width:985px)"]: {
+  "@media (max-width:985px)": {
     flexDirection: "column",
   },
   fontFamily: "AngeleciaProReg",
@@ -14,17 +14,17 @@ const Info = styled("article")({
   "& div:first-child": {
     // border: "2px solid blue",
     width: "50%",
-    
+
     "& p": {
       fontSize: "16px",
       letterSpacing: "0.25em",
       color: "rgb(199, 199, 199)",
     },
-    ["@media (max-width:985px)"]: {
-        width: '100%',
-        textAlign: 'center',
-        marginBottom: '40px'
-      },
+    "@media (max-width:985px)": {
+      width: "100%",
+      textAlign: "center",
+      marginBottom: "40px",
+    },
   },
   "& div:last-child": {
     // border: "2px solid green",
@@ -36,24 +36,23 @@ const Info = styled("article")({
       padding: "0px 20px",
     },
     "& p:last-child": {
-      color: "black"
+      color: "black",
     },
-    ["@media (max-width:985px)"]: {
-        width: '100%',
-        
-      },
+    "@media (max-width:985px)": {
+      width: "100%",
+    },
   },
   "& h2": {
     marginBottom: "30px",
     letterSpacing: "3px",
     lineHeight: "1.5",
     fontSize: "52px",
-    ["@media (max-width:985px)"]: {
-        fontSize: "46px",
-      },
-      ["@media (max-width:570px)"]: {
-        fontSize: "32px",
-      },
+    "@media (max-width:985px)": {
+      fontSize: "46px",
+    },
+    "@media (max-width:570px)": {
+      fontSize: "32px",
+    },
   },
 });
 
@@ -68,8 +67,8 @@ function InfoBlock() {
       </div>
       <div>
         <p>
-          «Здравствуй, друг! Меня зовут Ирина и я рада, что ты решил заглянуть на
-          эту страничку.
+          «Здравствуй, друг! Меня зовут Ирина и я рада, что ты решил заглянуть
+          на эту страничку.
         </p>
         <p>
           Фотография — моя самая большая любовь и страсть. Каждая съёмка для
@@ -81,8 +80,8 @@ function InfoBlock() {
           вам откликнулось — жду вас на съёмку.»
         </p>
         <p>
-         Звоните мне по номеру:  +7-960-688-88-00, <br />
-         Пишите мне на почту:  irinaevgl_84@mail.ru
+          Звоните мне по номеру: +7-960-688-88-00, <br />
+          Пишите мне на почту: irinaevgl_84@mail.ru
         </p>
       </div>
     </Info>

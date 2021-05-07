@@ -6,14 +6,14 @@ import PhotoCards from '../components/PortfolioPage/PhotoCards'
 
 const PortfolioSection = styled('section')({
     width: '100%',
-// border: '1px solid blue'
 })
+
 function PortfolioPage({albums, photos}) {
     return (
         <PortfolioSection>
             <LogoBlock  title={'gallery'} />
 
-            <GalleryBlock albums={albums} photos={photos}/>
+            <GalleryBlock albums={albums} photos={photos} />
 
             <PhotoCards photos={photos} />
         </PortfolioSection>

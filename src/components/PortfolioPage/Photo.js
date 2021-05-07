@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@material-ui/core";
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from "@material-ui/icons/Close";
 const PhotoImg = styled("div")({
   "& .imgFull:not(:target)": {
     display: "none",
@@ -26,43 +26,40 @@ const PhotoImg = styled("div")({
     right: "220px",
     fontSize: "50px",
     color: "red",
-
   },
   "& .closeImg:hover": {
     opacity: "0.4",
   },
-  '& a:hover': {
-    opacity: '0.6',
-    transition: 'opacity 0.5s ease 0s',
+  "& a:hover": {
+    opacity: "0.6",
+    transition: "opacity 0.5s ease 0s",
   },
-  ['@media(max-width:1160px)'] : {
+  "@media(max-width:1160px)": {
     "& .closeImg": {
       right: "20px",
     },
   },
-  ['@media(max-width:970px)'] : {
+  "@media(max-width:970px)": {
     "& .imgFullScreen": {
       width: 400,
-      height: 400
+      height: 400,
     },
   },
-  ['@media(max-width:750px)'] : {
+  "@media(max-width:750px)": {
     "& .imgFullScreen": {
       width: 300,
-      height: 300
+      height: 300,
     },
     "& .closeImg": {
       right: "20px",
-      top: '50px'
+      top: "50px",
     },
   },
-  ['@media(max-width:430px)'] : {
+  "@media(max-width:430px)": {
     "& .closeImg": {
-      right: '45%',
-      
+      right: "45%",
     },
-  }
-
+  },
 });
 /* PHOTO CLOSE  */
 

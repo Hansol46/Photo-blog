@@ -1,16 +1,15 @@
 import React from "react";
 import { styled } from "@material-ui/core";
-import { Link } from "react-router-dom";
 
 import InstagramIcon from "@material-ui/icons/Instagram";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import EmailIcon from "@material-ui/icons/Email";
 import PhoneOutlinedIcon from "@material-ui/icons/PhoneOutlined";
 import { colors, letterSpacing, fontWeight } from "../utils/vars";
 
 const FooterBlock = styled("footer")({
   padding: "65px 0px 50px 0px",
   width: "100%",
-//   border: "2px solid red",
+  //   border: "2px solid red",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -32,7 +31,7 @@ const Links = styled("div")({
     fontWeight: `${fontWeight.mainWeight}`,
     letterSpacing: `${letterSpacing.mainLetterSpacing}`,
     transition: "color 0.5s ease 0s",
-    padding: '0px 10px'
+    padding: "0px 10px",
   },
   "& ul li a:hover": {
     color: "black",
@@ -47,21 +46,24 @@ function Footer() {
       <Links>
         <ul>
           <li>
-            <Link to="#">
+            <a
+              href="https://instagram.com/photobooks46"
+              target="_blank"
+              rel="noreferrer"
+            >
               {" "}
               <InstagramIcon />{" "}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="#">
-              {" "}
-              <FacebookIcon />{" "}
-            </Link>
+            <a href="https://vk.com/irinaevgl" target="_blank" rel="noreferrer">
+              <EmailIcon />{" "}
+            </a>
           </li>
           <li>
-            <Link to="#">
+            <a href="tel:+79606888800">
               <PhoneOutlinedIcon />{" "}
-            </Link>
+            </a>
           </li>
         </ul>
       </Links>

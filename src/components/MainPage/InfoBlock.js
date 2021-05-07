@@ -2,7 +2,7 @@ import React from "react";
 import ImgHello from "../../images/hello.png";
 import { styled } from "@material-ui/core";
 import { colors, letterSpacing, fontWeight } from "../../utils/vars";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 const MainBlock = styled("article")({
   display: "flex",
   flexDirection: "column",
@@ -20,7 +20,7 @@ const ArticleBlock = styled("div")({
   textAlign: "center",
   // display: 'flex',
   // justifyContent: 'center',
-  ["@media(max-width: 985px)"]: {
+  "@media(max-width: 985px)": {
     width: "auto",
   },
   "& img": {
@@ -30,14 +30,12 @@ const ArticleBlock = styled("div")({
     // border: "1px solid green",
     marginBottom: "50px",
   },
-  ["@media (max-width: 726px)"] : {
-    
-  },
+  "@media (max-width: 726px)": {},
   "& h2": {
     marginBottom: "50px",
     letterSpacing: "3px",
-    ["@media (max-width: 726px)"] : {
-    fontSize: '18px'
+    "@media (max-width: 726px)": {
+      fontSize: "18px",
     },
   },
   "& p:first-of-type": {
@@ -45,31 +43,31 @@ const ArticleBlock = styled("div")({
   },
   "& p": {
     color: `${colors.mainColor}`,
-    ["@media (max-width: 726px)"] : {
-      fontSize: '16px'
-      },
+    "@media (max-width: 726px)": {
+      fontSize: "16px",
+    },
   },
 });
 const ButtonBlocks = styled("div")({
-    marginTop: '30px',
+  marginTop: "30px",
   display: "flex",
   flexDirection: "column",
-  alignItems:'center',
-  
+  alignItems: "center",
+
   "& a": {
-      borderRadius: '30px',
-      marginBottom: '20px',
-      display: 'block',
-      width: 170,
-      padding: '15px 30px',
-      background: '#f0f0f0;',
-      color: 'black',
-      transition: 'background 0.5s ease 0s',
+    borderRadius: "30px",
+    marginBottom: "20px",
+    display: "block",
+    width: 170,
+    padding: "15px 30px",
+    background: "#f0f0f0;",
+    color: "black",
+    transition: "background 0.5s ease 0s",
   },
-  "& a:hover":{
-    border:' 0px solid #618c6d',
+  "& a:hover": {
+    border: " 0px solid #618c6d",
     backgroundColor: "#618c6d",
-  }
+  },
 });
 function InfoBlock() {
   return (
@@ -77,8 +75,8 @@ function InfoBlock() {
       <ArticleBlock>
         <img src={ImgHello} alt="helllo" />
         <h2>
-          Меня зовут Ирина, я фотографирую, занимаюсь визуалом, и очень
-          люблю интересные фотосессии 
+          Меня зовут Ирина, я фотографирую, занимаюсь визуалом, и очень люблю
+          интересные фотосессии
         </h2>
         <p>Большинство моих работ - фотографии обычных людей, а не моделей. </p>
         <p>
@@ -89,7 +87,7 @@ function InfoBlock() {
         <ButtonBlocks>
           <Link to="/portfolio"> порфолио </Link>
           <Link to="/about"> об авторе </Link>
-          <Link to="#"> контакты </Link>
+          {/* <Link to="#"> контакты </Link> */}
         </ButtonBlocks>
       </ArticleBlock>
     </MainBlock>
