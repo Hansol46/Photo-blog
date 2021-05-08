@@ -96,6 +96,8 @@ import img89 from "../images/photosession/studio/+фото _051.jpg";
 import img90 from "../images/photosession/studio/фото_495.JPG";
 import img91 from "../images/photosession/studio/фото_548.JPG";
 import img92 from "../images/photosession/studio/фото_602.JPG";
+
+
 export const albumsArray = [
   {
     id: 1,
@@ -105,22 +107,10 @@ export const albumsArray = [
     id: 2,
     title: "Выпускные",
   },
-  //   {
-  //     id: 3,
-  //     title: "Детские фотосессии",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Семейные фотосессии",
-  //   },
   {
     id: 3,
     title: "Мужские портреты",
   },
-  //   {
-  //     id: 6,
-  //     title: "Женские фотосессии",
-  //   },
   {
     id: 4,
     title: "Студии и фотосессии",
@@ -128,27 +118,18 @@ export const albumsArray = [
 ];
 
 export const photosArray = [
+
   // СВАДЬБЫ
   {
     albumId: 1,
     id: 1,
     url: img1,
   },
-  //   {
-  //     albumId: 1,
-  //     id: 2,
-  //     url: img2,
-  //   },
   {
     albumId: 1,
     id: 3,
     url: img3,
   },
-  //   {
-  //     albumId: 1,
-  //     id: 4,
-  //     url: img4,
-  //   },
   {
     albumId: 1,
     id: 5,
@@ -169,61 +150,16 @@ export const photosArray = [
     id: 8,
     url: img8,
   },
-  //   {
-  //     albumId: 1,
-  //     id: 9,
-  //     url: img9,
-  //   },
-  //   {
-  //     albumId: 1,
-  //     id: 10,
-  //     url: img10,
-  //   },
-  //   {
-  //     albumId: 1,
-  //     id: 11,
-  //     url: img11,
-  //   },
-  //   {
-  //     albumId: 1,
-  //     id: 12,
-  //     url: img12,
-  //   },
-  //   {
-  //     albumId: 1,
-  //     id: 13,
-  //     url: img13,
-  //   },
-  //   {
-  //     albumId: 1,
-  //     id: 14,
-  //     url: img14,
-  //   },
   {
     albumId: 1,
     id: 15,
     url: img15,
   },
-  //   {
-  //     albumId: 1,
-  //     id: 16,
-  //     url: img16,
-  //   },
   {
     albumId: 1,
     id: 17,
     url: img17,
   },
-  //   {
-  //     albumId: 1,
-  //     id: 18,
-  //     url: img18,
-  //   },
-  //   {
-  //     albumId: 1,
-  //     id: 19,
-  //     url: img19,
-  //   },
 
   // ВЫПУСКНЫЕ
   {
@@ -231,31 +167,11 @@ export const photosArray = [
     id: 20,
     url: img20,
   },
-  //   {
-  //     albumId: 2,
-  //     id: 21,
-  //     url: img21,
-  //   },
-  //   {
-  //     albumId: 2,
-  //     id: 22,
-  //     url: img22,
-  //   },
   {
     albumId: 2,
     id: 23,
     url: img23,
   },
-  //   {
-  //     albumId: 2,
-  //     id: 24,
-  //     url: img24,
-  //   },
-  //   {
-  //     albumId: 2,
-  //     id: 25,
-  //     url: img25,
-  //   },
   {
     albumId: 2,
     id: 26,

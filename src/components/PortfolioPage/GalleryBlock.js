@@ -9,7 +9,6 @@ const Gallery = styled("section")({
   display: "grid",
   gridTemplateColumns: "2fr 2fr 2fr ",
   gap: "20px",
-  // border: '2px solid pink',
   "& a:hover": {
     opacity: "0.3",
     transition: "opacity 0.5s ease 0s",
@@ -26,6 +25,7 @@ function GalleryBlock({ albums, photos }) {
   console.log("Albums:", albumsArray);
   return (
     <Gallery>
+
       {albumsArray.map((album) => (
         <Route
           exact

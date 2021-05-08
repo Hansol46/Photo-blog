@@ -6,7 +6,6 @@ import { styled } from "@material-ui/core";
 import { photosArray } from "../../utils/data";
 
 const PhotoBlock = styled("div")({
-  // border: '2px solid red',
   display: "grid",
   gridTemplateColumns: "2fr 2fr 2fr ",
   gap: "20px",
@@ -23,9 +22,6 @@ const PhotoBlock = styled("div")({
   "@media (max-width: 700px)": {
     gridTemplateColumns: "2fr",
   },
-  // "@media (max-width: 530px)": {
-  //   gridTemplateColumns: "2fr 2fr",
-  // },
   "@media (max-width: 350px)": {
     gridTemplateColumns: "2fr",
     "& img": {
@@ -38,6 +34,8 @@ function PhotoCards({ photos }) {
   console.log("photos", photos);
   return (
     <PhotoBlock>
+
+
       {photosArray.map((photo) => (
         <Route
         path={`/portfolio/albums/${photo.albumId}`}
@@ -45,6 +43,8 @@ function PhotoCards({ photos }) {
         render={() => <Photo key={photo.id} photo={photo} />}
       />
       ))}
+
+
       {/* {photos.map((photo) => (
         <Route
           path={`/portfolio/albums/${photo.albumId}`}

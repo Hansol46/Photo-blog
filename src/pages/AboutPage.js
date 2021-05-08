@@ -5,7 +5,6 @@ import LogoBlock from '../components/LogoBlock'
 
 const AboutSection = styled('section')({
     width: '100%',
-    // border: '1px solid red'
 })
 function AboutPage() {
     return (
