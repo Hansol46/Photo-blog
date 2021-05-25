@@ -1,23 +1,24 @@
-import { styled } from '@material-ui/core'
-import React from 'react'
-import LogoBlock from '../components/LogoBlock'
-import GalleryBlock from '../components/PortfolioPage/GalleryBlock'
-import PhotoCards from '../components/PortfolioPage/PhotoCards'
+import { styled } from "@material-ui/core";
+import React from "react";
+import LogoBlock from "../components/LogoBlock";
+import GalleryBlock from "../components/PortfolioPage/GalleryBlock";
+import PhotoCards from "../components/PortfolioPage/PhotoCards";
 
-const PortfolioSection = styled('section')({
-    width: '100%',
-})
 
-function PortfolioPage({albums, photos}) {
-    return (
-        <PortfolioSection>
-            <LogoBlock  title={'gallery'} />
+const PortfolioSection = styled("section")({
+  width: "100%",
+});
 
-            <GalleryBlock albums={albums} photos={photos} />
+function PortfolioPage() {
+  return (
+    <PortfolioSection>
+      <LogoBlock title={"Галерея"} />
 
-            <PhotoCards photos={photos} />
-        </PortfolioSection>
-    )
+      <GalleryBlock />
+
+      <PhotoCards />
+    </PortfolioSection>
+  );
 }
 
-export default PortfolioPage
+export default PortfolioPage;

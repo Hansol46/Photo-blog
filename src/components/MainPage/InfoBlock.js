@@ -85,7 +85,7 @@ function InfoBlock() {
           просто получать удовольствие от процесса.
         </p>
         <ButtonBlocks>
-          <Link to="/portfolio"> порфолио </Link>
+          <Link to="/portfolio"> портфолио </Link>
           <Link to="/about"> об авторе </Link>
           {/* <Link to="#"> контакты </Link> */}
         </ButtonBlocks>

@@ -31,7 +31,7 @@ const PhotoBlock = styled("div")({
 });
 
 function PhotoCards({ photos }) {
-  console.log("photos", photos);
+  // console.log("photos", photos);
   return (
     <PhotoBlock>
 
@@ -40,7 +40,7 @@ function PhotoCards({ photos }) {
         <Route
         path={`/portfolio/albums/${photo.albumId}`}
         key={photo.id}
-        render={() => <Photo key={photo.id} photo={photo} />}
+        render={() => <Photo key={photo.id} photo={photo} albumId={photo.albumId}/>}
       />
       ))}
 

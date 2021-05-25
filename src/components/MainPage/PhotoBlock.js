@@ -3,11 +3,20 @@ import { styled } from "@material-ui/core";
 
 import mainPhoto from "../../images/main-photo.jpg";
 const Photo = styled("div")({
- 
+  
   "& img": {
-    width: "100%",
+    width: "60%",
+    borderRadius: '30px'
+    // borderRadius: '50%'
   },
   marginBottom: "50px",
+  textAlign: 'center',
+  "@media(max-width: 520px)":{
+    "& img": {
+      width: "100%",
+      // borderRadius: '50%'
+    },
+  }
  
 });
 

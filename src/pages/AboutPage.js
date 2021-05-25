@@ -9,7 +9,7 @@ const AboutSection = styled('section')({
 function AboutPage() {
     return (
         <AboutSection>
-            <LogoBlock title={'about'} />
+            <LogoBlock title={'Об авторе'} />
             <InfoBlock />
         </AboutSection>
     )

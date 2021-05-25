@@ -21,8 +21,7 @@ const Gallery = styled("section")({
     gridTemplateColumns: "2fr",
   },
 });
-function GalleryBlock({ albums, photos }) {
-  console.log("Albums:", albumsArray);
+function GalleryBlock() {
   return (
     <Gallery>
 
